@@ -1,0 +1,29 @@
+source_file,risk_category,count
+NWMP_August2025_MPCB_0.csv,High Risk,6
+NWMP_August2025_MPCB_0.csv,Low Risk,198
+NWMP_August2025_MPCB_0.csv,Moderate Risk,7
+NWMP_August2025_MPCB_0.csv,Severe Risk,4
+NWMP_August2025_MPCB_0.csv,Unknown,7
+NWMP_July2025.csv,High Risk,5
+NWMP_July2025.csv,Low Risk,195
+NWMP_July2025.csv,Moderate Risk,5
+NWMP_July2025.csv,Severe Risk,4
+NWMP_July2025.csv,Unknown,13
+NWMP_September2025_MPCB_0.csv,High Risk,5
+NWMP_September2025_MPCB_0.csv,Low Risk,208
+NWMP_September2025_MPCB_0.csv,Moderate Risk,5
+NWMP_September2025_MPCB_0.csv,Severe Risk,3
+NWMP_September2025_MPCB_0.csv,Unknown,1
+india_water_quality_preprocessed_phase1.csv,High Risk,91
+india_water_quality_preprocessed_phase1.csv,Low Risk,2882
+india_water_quality_preprocessed_phase1.csv,Moderate Risk,145
+india_water_quality_preprocessed_phase1.csv,Severe Risk,53
+swq_biological_parameter_manual_cwc_ap_2021_2025.csv,Low Risk,1370
+swq_biological_parameter_manual_cwc_ap_2021_2025.csv,Severe Risk,1
+swq_biological_parameter_manual_cwc_ap_2021_2025.csv,Unknown,6
+swq_manual_chemical_parameters_cwc_ap_1961_2020.csv,High Risk,2
+swq_manual_chemical_parameters_cwc_ap_1961_2020.csv,Low Risk,2244
+swq_manual_chemical_parameters_cwc_ap_1961_2020.csv,Moderate Risk,30
+swq_manual_chemical_parameters_cwc_ap_1961_2020.csv,Severe Risk,2
+swq_manual_chemical_parameters_cwc_ap_1961_2020.csv,Unknown,2973
+swq_manual_physical_parameters_cwc_ap_1961_2020.csv,Unknown,5250

@@ -1,0 +1,2 @@
+total_live_rows,rows_with_full_core_parameters,model_loaded_successfully,resolved_estimator_type,resolved_feature_count,rows_predicted_successfully,rows_with_unknown_ml_prediction,fallback_rows,predicted_compliant_count,predicted_non_compliant_count,average_non_compliance_probability,first_error_if_any
+40,40,True,Pipeline or Estimator,14,40,0,0,25,15,0.375,None

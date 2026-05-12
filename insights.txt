@@ -1,0 +1,74 @@
+--- MISSING VALUES ---
+State    11
+dtype: int64
+
+--- CLASS BALANCE: Is_Safe ---
+Is_Safe
+1    0.618732
+0    0.381268
+Name: proportion, dtype: float64
+
+--- CLASS BALANCE: Compliance_Label ---
+Compliance_Label
+Class_C          0.275623
+Non_Compliant    0.261432
+Class_B          0.252286
+Class_D          0.117629
+Class_A          0.090823
+Class_E          0.002208
+Name: proportion, dtype: float64
+
+--- SPATIAL SAFETY RATES (Primary_Position) ---
+Primary_Position
+AFTER          0.643678
+BEFORE         0.651685
+DOWNSTREAM     0.583072
+UNSPECIFIED    0.609399
+UPSTREAM       0.699095
+Name: Is_Safe, dtype: float64
+
+--- US/DS SAFETY RATES ---
+Primary_Position
+DOWNSTREAM    0.531915
+UPSTREAM      0.659574
+Name: Is_Safe, dtype: float64
+
+--- TEMPORAL SAFETY (2022 vs 2023) ---
+Year
+2022    0.619351
+2023    0.618125
+Name: Is_Safe, dtype: float64
+Year
+2022    1571
+2023    1600
+Name: Is_Safe, dtype: int64
+
+--- SAFE VS UNSAFE MEANS ---
+Is_Safe                                   0           1
+Temperature_Mean_C                24.040323   22.454906
+Dissolved_Oxygen_Mean_mgL          6.046816    7.331017
+pH_Mean                            7.674926    7.838279
+Conductivity_Mean_umho_cm        931.223118  712.278797
+BOD_Mean_mgL                       7.988255    1.662090
+Nitrate_N_Mean_mgL                 2.529605    2.056476
+Fecal_Coliform_Mean_MPN100ml   68424.109471  278.256524
+Total_Coliform_Mean_MPN100ml  312340.504839  752.026147
+
+--- THRESHOLD CHECKS ---
+Safe but DO < 5: 30 / 1962
+Safe but BOD > 3: 0 / 1962
+Safe but pH < 6.5 or > 8.5: 44 / 1962
+Unsafe but DO >= 5 AND BOD <= 3 AND pH in 6.5-8.5:
+363 / 1209
+
+--- CORRELATIONS WITH IS_SAFE (Spearman) ---
+BOD_Mean_mgL                   -0.635223
+Total_Coliform_Mean_MPN100ml   -0.474698
+Fecal_Coliform_Mean_MPN100ml   -0.458321
+Conductivity_Mean_umho_cm      -0.299770
+Temperature_Mean_C             -0.111883
+pH_Mean                        -0.033840
+Nitrate_N_Mean_mgL              0.034373
+Dissolved_Oxygen_Mean_mgL       0.282620
+Is_Safe                         1.000000
+Name: Is_Safe, dtype: float64

@@ -1,0 +1,2 @@
+total_rows,rows_with_valid_rule_label,model_predicted_compliant,model_predicted_non_compliant,rule_compliant,rule_non_compliant,agreement_rate,disagreement_count
+666,645,154,491,150,495,0.993798449612403,4

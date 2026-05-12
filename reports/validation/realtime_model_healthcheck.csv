@@ -1,0 +1,2 @@
+total_rows,full_core_params_rows,successful_predictions,unknown_predictions,fallback_count,non_compliant_predictions,non_null_probabilities,prob_min,prob_mean,prob_max
+40,40,40,0,0,16,40,0.0,0.4,1.0

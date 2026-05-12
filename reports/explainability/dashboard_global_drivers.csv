@@ -1,0 +1,15 @@
+rank,feature,importance,explanation_note
+1,bod,0.1465465465465465,Core regulatory parameter; BOD > 3 mg/L triggers non-compliance
+2,dissolved_oxygen,0.0486486486486486,Core regulatory parameter; DO < 5 mg/L triggers non-compliance
+3,ph,0.0,Core regulatory parameter; pH outside 6.5-8.5 triggers non-compliance
+4,temperature,0.0,Physical parameter; affects DO solubility
+5,conductivity,0.0,Chemical indicator; reflects dissolved ion concentration
+6,nitrate,0.0,Supporting feature in the model pipeline
+7,fecal_coliform,0.0,Supporting feature in the model pipeline
+8,total_coliform,0.0,Supporting feature in the model pipeline
+9,fecal_streptococci,0.0,Supporting feature in the model pipeline
+10,turbidity,0.0,Supporting feature in the model pipeline
+11,cod,0.0,Supporting feature in the model pipeline
+12,total_dissolved_solids,0.0,Supporting feature in the model pipeline
+13,season,0.0,Supporting feature in the model pipeline
+14,river_name,0.0,Supporting feature in the model pipeline

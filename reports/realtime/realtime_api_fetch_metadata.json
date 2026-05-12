@@ -1,0 +1,9 @@
+{
+  "endpoint_url": "https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json",
+  "fetch_timestamp": "2026-05-12T11:03:45.995801Z",
+  "http_status_code": 200,
+  "number_of_records_fetched": 468,
+  "success": true,
+  "error_message": null,
+  "fetch_mode": "live_api"
+}

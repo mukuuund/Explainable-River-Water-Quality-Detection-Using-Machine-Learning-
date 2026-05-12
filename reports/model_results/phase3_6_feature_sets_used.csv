@@ -1,0 +1,15 @@
+Feature,Core Regulatory Model,Extended Clean Model,True Auxiliary-Only Model
+dissolved_oxygen,Yes,Yes,No
+conductivity,No,Yes,Yes
+turbidity,No,Yes,Yes
+season,No,Yes,Yes
+total_dissolved_solids,No,Yes,Yes
+river_name,No,Yes,Yes
+temperature,No,Yes,Yes
+bod,Yes,Yes,No
+nitrate,No,Yes,Yes
+cod,No,Yes,Yes
+fecal_coliform,No,Yes,Yes
+total_coliform,No,Yes,Yes
+ph,Yes,Yes,No
+fecal_streptococci,No,Yes,Yes

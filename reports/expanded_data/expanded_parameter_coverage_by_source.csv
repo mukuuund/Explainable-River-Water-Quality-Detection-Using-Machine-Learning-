@@ -1,0 +1,10 @@
+source_file,state,parameter_group,row_count,dissolved_oxygen_available_pct,bod_available_pct,ph_available_pct,temperature_available_pct,conductivity_available_pct,nitrate_available_pct,fecal_coliform_available_pct,total_coliform_available_pct,turbidity_available_pct,cod_available_pct,total_dissolved_solids_available_pct,all_three_core_available_pct,at_least_two_core_available_pct,at_least_three_auxiliary_available_pct
+3f8f798f-b3e0-4caa-a34e-6ba2ea4d7eb2.csv,28,mixed/unknown,1730,0.0,0.0,0.0,98.78612716763006,89.59537572254335,0.0,0.0,0.0,78.38150289017342,0.0,0.0,0.0,0.0,77.22543352601156
+swq_biological_parameter_manual_cpcb_ar_2021_2025.csv,12,biological,13,0.0,100.0,0.0,0.0,0.0,0.0,84.61538461538461,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+swq_biological_parameter_manual_cpcb_as_2021_2025.csv,18,biological,1323,0.0,99.848828420257,0.0,0.0,0.0,0.0,62.96296296296296,33.93801965230537,0.0,0.0,0.0,0.0,0.0,0.0
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,1,chemical,5819,78.96545798247121,0.0,39.302285616085236,0.0,0.0,20.828321017356934,0.0,0.0,0.0,0.0,24.918370854098644,0.0,18.28492868190411,0.0
+swq_manual_biological_parameters_cpcb_as_1961_2020.csv,18,biological,4555,0.0,91.24039517014269,0.0,0.0,0.0,0.0,72.44785949506037,48.07903402854007,0.0,0.0,0.0,0.0,0.0,0.0
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,1,chemical,1221,3.276003276003276,0.0,85.42178542178543,0.0,0.0,2.293202293202293,0.0,0.0,0.0,0.0,34.80753480753481,0.0,3.194103194103194,0.0
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,29,chemical,10158,31.521953140381964,0.0,98.74975388856075,0.0,0.0,67.67080133884623,0.0,0.0,0.0,0.0,33.16597755463674,0.0,31.46288639495964,0.0
+swq_manual_physical_parameters_cwc_ar_1961_2020.csv,12,physical,3211,0.0,0.0,0.0,87.3248209280598,56.52444721270632,0.0,0.0,0.0,24.602927436935534,0.0,0.0,0.0,0.0,18.903768296480848
+swq_physical_parameter_manual_cwc_ar_2021_2025.csv,12,physical,10707,0.0,0.0,0.0,94.75109741290744,88.36275333893714,0.0,0.0,0.0,46.306154851966,0.0,0.0,0.0,0.0,41.30008405715887

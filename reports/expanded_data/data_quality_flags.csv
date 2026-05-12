@@ -1,0 +1,15 @@
+source_file,row_index,column,value,flag_type,action
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,5281,ph,21.7,Extreme pH,Kept but flagged
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,120,ph,15.0,Extreme pH,Kept but flagged
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,554,ph,704.0,Extreme pH,Kept but flagged
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,645,ph,15.0,Extreme pH,Kept but flagged
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,646,ph,15.0,Extreme pH,Kept but flagged
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,647,ph,15.0,Extreme pH,Kept but flagged
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,648,ph,15.0,Extreme pH,Kept but flagged
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,649,ph,15.0,Extreme pH,Kept but flagged
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,650,ph,15.0,Extreme pH,Kept but flagged
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,651,ph,15.0,Extreme pH,Kept but flagged
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,652,ph,15.0,Extreme pH,Kept but flagged
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,1062,ph,78.1,Extreme pH,Kept but flagged
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,4778,ph,791.0,Extreme pH,Kept but flagged
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,8139,ph,7358.0,Extreme pH,Kept but flagged

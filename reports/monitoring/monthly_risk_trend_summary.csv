@@ -1,0 +1,35 @@
+station_name,first_month,last_month,first_risk_score,last_risk_score,risk_change,repeated_high_risk
+"Arnala sea, Village. Arnala, Taluka. Vasai, District. Thane.",July,September,9.26,10.76,1.5,False
+"Bassein creek at VasaiFort , Village. Bassein, Taluka. Vasai, District. Thane.",July,September,14.16,8.41,-5.75,False
+"Bhayander creek at D/s of Railway bridge at  Jasal park choupathy, Village. Navghar, Taluka. Bhayander, District. Thane.",July,September,12.56,9.16,-3.4000000000000004,False
+"Bhima river at Takli near Karnataka border, Village. Takali, Taluka. South Solapur,  District. Solapur.",July,August,1.7,4.43,2.7299999999999995,False
+"Colour chem  Nalla, Village. Majiwada,Taluka. Thane,District. Thane.",August,September,74.2,33.57,-40.63,False
+"Kolar river before confluence with Kanhan river at Waregaon Bridge, Village. Waregaon, Taluka.Kamptee, District.Nagpur.",August,September,0.85,2.13,1.2799999999999998,False
+"Mithi river near Road bridge, Village. Mahim, Taluka. Bandra, District. Mumbai.",August,September,80.0,24.77,-55.230000000000004,False
+"Nag river  near asoli road bridge, bhandara road, Dist- Nagpur",August,September,50.37,28.29,-22.08,False
+Nag river  near bhandewadi bridge Dist- Nagpur,August,September,53.77,26.21,-27.560000000000002,False
+"Nag river near ambazari lake, Dist- Nagpur",August,September,0.43,0.68,0.25000000000000006,False
+"Nira river at Sarola bridge, Village. Sarola, Taluka.Bhor, District. Pune.",July,August,6.72,0.51,-6.21,False
+"Pehlar Dam on Pehlar river. inlet of water works, Village. Pehlar, Taluka. Vasai, District. Thane.",July,September,0.0,0.0,0.0,False
+"Pilli river  near wanjara layout, kamptee road, Dist-Nagpur",August,September,50.79,19.63,-31.16,False
+"Pilli river  near, vill-mankapur on koradi road, Dist- Nagpur",August,September,69.94,15.98,-53.959999999999994,False
+"Rabodi nalla, Village. Rabodi,Taluka. Thane, District. Thane.",August,September,58.49,34.37,-24.120000000000005,False
+"Sandoz nalla, Village. Sandozbaug,Taluka. Thane,District. Thane.",August,September,74.2,34.47,-39.730000000000004,False
+"Sea water at Charni road choupathy, Village. Girgaon, Taluka. Mumbai, District. Mumbai.",July,September,9.635,11.71,2.075000000000001,False
+"Sea water at Gateway of India, Village. Colaba, Taluka. Colaba, District. Mumbai.",July,September,10.91,14.11,3.1999999999999993,False
+"Sea water at Haji Ali, Village. Worli, Taluka. Worli, District. Mumbai.",July,September,13.31,10.06,-3.25,False
+"Sea water at Malabar Hill, Village. Walkeshwar,Taluka. Mumbai,District. Mumbai.",July,September,17.035,8.46,-8.575,False
+"Sea water at Nariman Point, Village. Colaba, Taluka. Colaba, District. Mumbai.",July,September,16.61,12.51,-4.1,False
+"Thane creek at Elephanta Island, Village. Elephanta Island , Taluka. Mumbai, District. Mumbai.",July,September,12.46,11.34,-1.120000000000001,False
+"Thane creek at Kalwa road bridge, Village. Kalwa,Taluka. Thane,District. Thane.",August,September,1.53,31.06,29.529999999999998,False
+"Ulhas creek at Gaimukh at Nagla Bunder on Ghod bunder road, Village. Nagla,Taluka. Thane,District. Thane.",August,September,1.7,0.85,-0.85,False
+"Ulhas creek at Kolshet Reti bunder, Village. Kolshet, Taluka. Thane, District. Thane.",August,September,1.7,0.51,-1.19,False
+"Ulhas creek at Mumbra Reti bunder, Village. Mumbra,Taluka. Thane, District. Thane.",August,September,1.53,2.55,1.0199999999999998,False
+"Ulhas creek at Versova bridge, Village. Versova, Taluka. Vasai, District. Thane.",July,September,4.26,2.55,-1.71,False
+"Uttan sea at Bhayander, Village. Uttan, Taluka. Bhayander, District. Thane.",July,September,15.86,13.16,-2.6999999999999993,False
+"Wardha river at D/s of ACC Ltd. Ghuggus near WCL pump house, Village. Ghuggus, Taluka. Chandrapur, District. Chandrapur.",July,August,0.68,0.85,0.16999999999999993,False
+"Wardha river at Pulgaon Railway Bridge, Village. Pulgaon,Taluka . Wardha, District. Wardha.",July,August,0.0,2.13,2.13,False
+"Wardha river at U/s of ACC Ltd. Ghuggus near WCL pump house, Village. Ghuggus, Taluka. Chandrapur, District. Chandrapur.",July,August,0.51,0.51,0.0,False
+"Wardha river at confluence point of Penganga & Wardha. Village. Jugad, Taluka. Wani, District. Yavatmal.",July,August,0.17,0.94,0.7699999999999999,False
+"Wena river at D/s of Mohata Mills, near  bridge on Hinganghat. Wadner road,  Village. Hinganghat, Taluka. Hinganghat,  District. Wardha.",July,August,0.17,2.13,1.96,False
+"Wena river at U/s of Mohata Mills, near Railway bridge on Wardha  Chandrapur Railway line, Village. Hinganghat, Taluka. Hinganghat, District. Wardha.",July,August,0.0,1.7,1.7,False

@@ -1,0 +1,13 @@
+[
+    "temperature",
+    "conductivity",
+    "nitrate",
+    "fecal_coliform",
+    "total_coliform",
+    "fecal_streptococci",
+    "turbidity",
+    "cod",
+    "total_dissolved_solids",
+    "season",
+    "river_name"
+]

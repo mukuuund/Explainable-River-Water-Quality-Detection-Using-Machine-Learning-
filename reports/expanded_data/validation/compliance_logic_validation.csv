@@ -1,0 +1,61 @@
+dissolved_oxygen,bod,ph,available_compliance_label,strict_compliance_label,violation_reasons,label_confidence,expected_label_from_manual_check,pass_fail
+,,6.24,Non-Compliant,Unknown,['ph'],Low,Non-Compliant,Pass
+,3.6,,Non-Compliant,Unknown,['bod'],Low,Non-Compliant,Pass
+10.7,,4.87,Non-Compliant,Unknown,['ph'],Medium,Non-Compliant,Pass
+,,9.0,Non-Compliant,Unknown,['ph'],Low,Non-Compliant,Pass
+10.3,,5.3,Non-Compliant,Unknown,['ph'],Medium,Non-Compliant,Pass
+2.17,,7.54,Non-Compliant,Unknown,['do'],Medium,Non-Compliant,Pass
+,9.3,,Non-Compliant,Unknown,['bod'],Low,Non-Compliant,Pass
+,15.0,,Non-Compliant,Unknown,['bod'],Low,Non-Compliant,Pass
+,3.4,,Non-Compliant,Unknown,['bod'],Low,Non-Compliant,Pass
+7.5,,5.4,Non-Compliant,Unknown,['ph'],Medium,Non-Compliant,Pass
+4.1,,8.8,Non-Compliant,Unknown,"['do', 'ph']",Medium,Non-Compliant,Pass
+7.28,,8.57,Non-Compliant,Unknown,['ph'],Medium,Non-Compliant,Pass
+,,8.6,Non-Compliant,Unknown,['ph'],Low,Non-Compliant,Pass
+,4.2,,Non-Compliant,Unknown,['bod'],Low,Non-Compliant,Pass
+7.5,,4.99,Non-Compliant,Unknown,['ph'],Medium,Non-Compliant,Pass
+,3.2,,Non-Compliant,Unknown,['bod'],Low,Non-Compliant,Pass
+,26.0,,Non-Compliant,Unknown,['bod'],Low,Non-Compliant,Pass
+,,6.32,Non-Compliant,Unknown,['ph'],Low,Non-Compliant,Pass
+6.88,,8.52,Non-Compliant,Unknown,['ph'],Medium,Non-Compliant,Pass
+11.0,,5.86,Non-Compliant,Unknown,['ph'],Medium,Non-Compliant,Pass
+,,7.9,Compliant,Unknown,[],Low,Compliant,Pass
+,1.2,,Compliant,Unknown,[],Low,Compliant,Pass
+,2.0,,Compliant,Unknown,[],Low,Compliant,Pass
+,2.2,,Compliant,Unknown,[],Low,Compliant,Pass
+6.03,,8.07,Compliant,Unknown,[],Medium,Compliant,Pass
+5.6,,7.8,Compliant,Unknown,[],Medium,Compliant,Pass
+5.06,,7.42,Compliant,Unknown,[],Medium,Compliant,Pass
+,,8.12,Compliant,Unknown,[],Low,Compliant,Pass
+6.43,,6.81,Compliant,Unknown,[],Medium,Compliant,Pass
+9.05,,,Compliant,Unknown,[],Low,Compliant,Pass
+8.95,,,Compliant,Unknown,[],Low,Compliant,Pass
+,2.6,,Compliant,Unknown,[],Low,Compliant,Pass
+,2.6,,Compliant,Unknown,[],Low,Compliant,Pass
+9.12,,8.4,Compliant,Unknown,[],Medium,Compliant,Pass
+,1.2,,Compliant,Unknown,[],Low,Compliant,Pass
+7.95,,,Compliant,Unknown,[],Low,Compliant,Pass
+,,7.8,Compliant,Unknown,[],Low,Compliant,Pass
+8.8,,,Compliant,Unknown,[],Low,Compliant,Pass
+7.77,,,Compliant,Unknown,[],Low,Compliant,Pass
+,2.4,,Compliant,Unknown,[],Low,Compliant,Pass
+,,,No Target Data,Unknown,[],Insufficient Data,No Target Data,Pass
+,,,No Target Data,Unknown,[],Insufficient Data,No Target Data,Pass
+,,,No Target Data,Unknown,[],Insufficient Data,No Target Data,Pass
+,,,No Target Data,Unknown,[],Insufficient Data,No Target Data,Pass
+,,,No Target Data,Unknown,[],Insufficient Data,No Target Data,Pass
+,,,No Target Data,Unknown,[],Insufficient Data,No Target Data,Pass
+,,,No Target Data,Unknown,[],Insufficient Data,No Target Data,Pass
+,,,No Target Data,Unknown,[],Insufficient Data,No Target Data,Pass
+,,,No Target Data,Unknown,[],Insufficient Data,No Target Data,Pass
+,,,No Target Data,Unknown,[],Insufficient Data,No Target Data,Pass
+,,,No Target Data,Unknown,[],Insufficient Data,No Target Data,Pass
+,,,No Target Data,Unknown,[],Insufficient Data,No Target Data,Pass
+,,,No Target Data,Unknown,[],Insufficient Data,No Target Data,Pass
+,,,No Target Data,Unknown,[],Insufficient Data,No Target Data,Pass
+,,,No Target Data,Unknown,[],Insufficient Data,No Target Data,Pass
+,,,No Target Data,Unknown,[],Insufficient Data,No Target Data,Pass
+,,,No Target Data,Unknown,[],Insufficient Data,No Target Data,Pass
+,,,No Target Data,Unknown,[],Insufficient Data,No Target Data,Pass
+,,,No Target Data,Unknown,[],Insufficient Data,No Target Data,Pass
+,,,No Target Data,Unknown,[],Insufficient Data,No Target Data,Pass

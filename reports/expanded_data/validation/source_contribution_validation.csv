@@ -1,0 +1,10 @@
+source_file,row_count,percentage_of_new_uploads,state,parameter_group,non_null_parameter_count,top_5_available_parameters
+3f8f798f-b3e0-4caa-a34e-6ba2ea4d7eb2.csv,1730,4.47,28,mixed/unknown,4615,"['temperature', 'conductivity', 'turbidity', 'dissolved_oxygen', 'bod']"
+swq_biological_parameter_manual_cpcb_ar_2021_2025.csv,13,0.03,12,biological,24,"['bod', 'fecal_coliform', 'dissolved_oxygen', 'ph', 'temperature']"
+swq_biological_parameter_manual_cpcb_as_2021_2025.csv,1323,3.42,18,biological,2603,"['bod', 'fecal_coliform', 'total_coliform', 'dissolved_oxygen', 'ph']"
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,5819,15.02,1,chemical,22529,"['dissolved_oxygen', 'ph', 'total_dissolved_solids', 'calcium', 'sulphate']"
+swq_manual_biological_parameters_cpcb_as_1961_2020.csv,4555,11.76,18,biological,9646,"['bod', 'fecal_coliform', 'total_coliform', 'dissolved_oxygen', 'ph']"
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,1221,3.15,1,chemical,11289,"['carbonate', 'ph', 'chloride', 'bicarbonate', 'magnesium']"
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,10158,26.22,29,chemical,125609,"['ph', 'carbonate', 'calcium', 'magnesium', 'chloride']"
+swq_manual_physical_parameters_cwc_ar_1961_2020.csv,3211,8.29,12,physical,5409,"['temperature', 'conductivity', 'turbidity', 'dissolved_oxygen', 'bod']"
+swq_physical_parameter_manual_cwc_ar_2021_2025.csv,10707,27.64,12,physical,24566,"['temperature', 'conductivity', 'turbidity', 'total_solids', 'dissolved_oxygen']"

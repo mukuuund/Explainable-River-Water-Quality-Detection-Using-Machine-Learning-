@@ -1,0 +1,21 @@
+input_file,exists,row_count_if_csv,file_size_kb,used_on_page
+data/processed/nwmp_2025_predictions.csv,True,666,573.39,Compliance Monitoring
+reports/monitoring/hotspot_summary.csv,True,223,39.45,Hotspot Detection
+reports/monitoring/top_20_hotspots.csv,True,20,3.71,Hotspot Detection
+reports/monitoring/alerts.csv,True,516,195.06,Alert Center
+reports/monitoring/alert_summary.csv,True,3,0.04,Alert Center
+reports/monitoring/monthly_compliance_summary.csv,True,11,0.48,Project Overview
+reports/monitoring/monthly_risk_trend_summary.csv,True,34,4.54,Project Overview
+reports/explainability/dashboard_global_drivers.csv,True,14,0.98,Explainability
+reports/explainability/dashboard_auxiliary_drivers.csv,True,11,0.84,Explainability
+reports/explainability/dashboard_hotspot_explanations.csv,True,20,11.7,Hotspot Detection
+reports/explainability/dashboard_explainable_alerts.csv,True,516,162.58,Alert Center
+reports/explainability/phase5_1_cleanup_summary.md,True,,1.02,Methodology
+reports/explainability/PHASE_5_1_OUTPUT_REVIEW_README.md,True,,9.61,Methodology
+reports/explainability/historical_context_for_hotspots_v2.csv,True,20,3.76,Expanded Historical Baseline
+data/processed/expanded/expanded_historical_multistate_baseline.csv,True,49238,22341.81,Expanded Historical Baseline
+data/processed/expanded/expanded_baseline_long_format.csv,True,398824,45917.39,Expanded Historical Baseline
+reports/expanded_data/validation/phase4_5_validation_summary.md,True,,0.82,Expanded Historical Baseline
+reports/expanded_data/coverage_by_state.csv,True,5,0.06,Expanded Historical Baseline
+reports/expanded_data/coverage_by_parameter_group.csv,True,4,0.09,Expanded Historical Baseline
+reports/expanded_data/phase4_5a_best_supported_parameters_fixed.csv,True,39,0.61,Expanded Historical Baseline

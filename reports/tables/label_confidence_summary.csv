@@ -1,0 +1,8 @@
+source_file,high_confidence_count,medium_confidence_count,low_confidence_count,insufficient_count
+NWMP_August2025_MPCB_0.csv,215,0,0,7
+NWMP_July2025.csv,209,0,0,13
+NWMP_September2025_MPCB_0.csv,221,0,0,1
+india_water_quality_preprocessed_phase1.csv,0,3171,0,0
+swq_biological_parameter_manual_cwc_ap_2021_2025.csv,0,0,1371,6
+swq_manual_chemical_parameters_cwc_ap_1961_2020.csv,0,0,2278,2973
+swq_manual_physical_parameters_cwc_ap_1961_2020.csv,0,0,0,5250

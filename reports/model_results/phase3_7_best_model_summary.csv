@@ -1,0 +1,4 @@
+Variant,Split_Type,Model,Accuracy,Balanced_Accuracy,Precision_NonCompliant,Recall_NonCompliant,F1_NonCompliant,ROC_AUC
+Core Regulatory Model,Group_Split,DecisionTree,0.912,0.901,0.86,0.888,0.854,0.971
+Extended Clean Model,Group_Split,DecisionTree,0.907,0.899,0.878,0.891,0.861,0.977
+True Auxiliary-Only Model,Group_Split,RandomForest,0.750788644,0.71564308,0.637254902,0.607476636,0.622009569,0.779044281

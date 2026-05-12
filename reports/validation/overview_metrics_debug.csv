@@ -1,0 +1,12 @@
+metric,value,source,status
+total_nwmp_rows,666,nwmp_2025_predictions.csv,PASS
+stations_monitored,223,nwmp_2025_predictions.csv,PASS
+non_compliance_recall,N/A,Unknown,FAIL
+leakage_safe_f1,0.622009569,phase3_7_best_model_summary.csv,PASS
+persistent_hotspots,134,hotspot_summary.csv,PASS
+total_alerts,516,alerts.csv,PASS
+high_severe_alerts,495,alerts.csv,PASS
+expanded_baseline_rows,49238,expanded_historical_multistate_baseline.csv,PASS
+operational_agreement,0.907,phase3_7_best_model_summary.csv,PASS
+extended_f1,0.861,phase3_7_best_model_summary.csv,PASS
+leakage_safe_auc,0.779044281,phase3_7_best_model_summary.csv,PASS

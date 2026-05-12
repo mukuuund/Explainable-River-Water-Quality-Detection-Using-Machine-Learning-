@@ -1,0 +1,15 @@
+expected_feature,present_in_raw,non_null_count,dtype_in_model_input,sample_value_raw,numeric_cleaning_applied
+dissolved_oxygen,True,40,float64,7.4,False
+bod,True,40,float64,2.52,False
+ph,True,40,float64,8.47,False
+temperature,True,0,float64,None,False
+conductivity,True,40,float64,404.3,False
+nitrate,True,40,float64,0.3,False
+fecal_coliform,True,0,float64,None,False
+total_coliform,True,0,float64,None,False
+fecal_streptococci,True,0,float64,None,False
+turbidity,True,0,float64,None,False
+cod,True,40,float64,11.35,False
+total_dissolved_solids,True,0,float64,None,False
+season,True,0,float64,Summer,True
+river_name,True,0,float64,Unknown,True

@@ -1,0 +1,4 @@
+file,exists,last_modified,size_bytes,modified_by_phase4_5
+data/processed/model_ready_phase1.csv,True,2026-05-01 23:25:19.882607,3656024,False
+data/processed/nwmp_operational_2025.csv,True,2026-05-01 23:25:19.918773,564620,False
+data/processed/nwmp_2025_predictions.csv,True,2026-05-02 00:10:36.135275,587147,False

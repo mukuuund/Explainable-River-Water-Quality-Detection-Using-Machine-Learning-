@@ -1,0 +1,7 @@
+transformed_index,transformed_feature_name,original_feature,used_in_shap
+0,dissolved_oxygen,dissolved_oxygen,True
+1,bod,bod,True
+2,temperature,temperature,True
+3,fecal_coliform,fecal_coliform,True
+4,total_coliform,total_coliform,True
+5,fecal_streptococci,fecal_streptococci,True

@@ -1,0 +1,2 @@
+total_rows,rows_with_valid_target,rows_with_med_high_confidence,rows_with_3_aux,rows_no_core_but_aux,states_represented,rivers_represented,station_count,recommended_use
+38737,4299,4299,6365,6365,5,20,319,auxiliary-only model extension

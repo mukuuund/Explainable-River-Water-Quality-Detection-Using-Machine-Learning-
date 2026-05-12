@@ -1,0 +1,15 @@
+,0
+dissolved_oxygen,float64
+bod,float64
+ph,float64
+temperature,float64
+conductivity,float64
+nitrate,float64
+fecal_coliform,float64
+total_coliform,float64
+fecal_streptococci,float64
+turbidity,float64
+cod,float64
+total_dissolved_solids,float64
+season,str
+river_name,str

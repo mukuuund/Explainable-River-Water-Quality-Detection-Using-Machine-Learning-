@@ -1,0 +1,7 @@
+feature,mean_abs_shap,mean_shap,rank,interpretation
+bod,0.42752725607048414,0.24510822151237177,1,Generally increases non-compliance risk
+dissolved_oxygen,0.12844155484569872,-0.005108221512363459,2,Generally decreases non-compliance risk
+temperature,0.0,0.0,3,Negligible impact
+fecal_coliform,0.0,0.0,3,Negligible impact
+total_coliform,0.0,0.0,3,Negligible impact
+fecal_streptococci,0.0,0.0,3,Negligible impact

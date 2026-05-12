@@ -1,0 +1,8 @@
+source_file,row_count,column_count,date_range,station_count,river_count
+NWMP_August2025_MPCB_0.csv,222,69,2025-08-03 to 2025-08-11,222,7
+NWMP_July2025.csv,222,68,2025-07-01 to 2025-07-09,222,7
+NWMP_September2025_MPCB_0.csv,222,69,2025-09-01 to 2025-09-10,222,7
+india_water_quality_preprocessed_phase1.csv,3171,79,Unknown,1740,0
+swq_biological_parameter_manual_cwc_ap_2021_2025.csv,1377,38,Unknown,0,0
+swq_manual_chemical_parameters_cwc_ap_1961_2020.csv,5251,62,Unknown,0,0
+swq_manual_physical_parameters_cwc_ap_1961_2020.csv,5250,38,Unknown,0,0

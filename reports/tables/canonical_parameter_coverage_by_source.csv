@@ -1,0 +1,8 @@
+source_file,dissolved_oxygen_available_pct,bod_available_pct,ph_available_pct,all_three_core_available_pct,at_least_two_core_available_pct
+NWMP_August2025_MPCB_0.csv,96.84684684684684,96.84684684684684,96.84684684684684,96.84684684684684,96.84684684684684
+NWMP_July2025.csv,94.14414414414415,94.14414414414415,94.14414414414415,94.14414414414415,94.14414414414415
+NWMP_September2025_MPCB_0.csv,99.54954954954955,99.54954954954955,99.54954954954955,99.54954954954955,99.54954954954955
+india_water_quality_preprocessed_phase1.csv,100.0,100.0,0.0,0.0,100.0
+swq_biological_parameter_manual_cwc_ap_2021_2025.csv,0.0,99.56427015250546,0.0,0.0,0.0
+swq_manual_chemical_parameters_cwc_ap_1961_2020.csv,43.382212911826315,0.0,0.0,0.0,0.0
+swq_manual_physical_parameters_cwc_ap_1961_2020.csv,0.0,0.0,0.0,0.0,0.0

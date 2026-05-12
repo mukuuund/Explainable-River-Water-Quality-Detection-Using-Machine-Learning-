@@ -1,0 +1,19 @@
+Variant,Split_Type,Model,Accuracy,Balanced_Accuracy,Precision_NonCompliant,Recall_NonCompliant,F1_NonCompliant,ROC_AUC
+Core Regulatory Model,Group_Split,DummyClassifier,0.6624605678233438,0.5,0.0,0.0,0.0,0.5
+Core Regulatory Model,Group_Split,LogisticRegression,0.9132492113564669,0.9070204717400979,0.8597285067873304,0.8878504672897196,0.8735632183908046,0.9778148642634623
+Core Regulatory Model,Group_Split,DecisionTree,1.0,1.0,1.0,1.0,1.0,1.0
+Core Regulatory Model,Group_Split,RandomForest,1.0,1.0,1.0,1.0,1.0,1.0
+Core Regulatory Model,Group_Split,GradientBoosting,1.0,1.0,1.0,1.0,1.0,1.0
+Core Regulatory Model,Group_Split,HistGradientBoosting,1.0,1.0,1.0,1.0,1.0,1.0
+Extended Clean Model,Group_Split,DummyClassifier,0.6624605678233438,0.5,0.0,0.0,0.0,0.5
+Extended Clean Model,Group_Split,LogisticRegression,0.9037854889589906,0.8964396973742768,0.8461538461538461,0.8738317757009346,0.8597701149425288,0.9768914107699155
+Extended Clean Model,Group_Split,DecisionTree,1.0,1.0,1.0,1.0,1.0,1.0
+Extended Clean Model,Group_Split,RandomForest,1.0,1.0,1.0,1.0,1.0,1.0
+Extended Clean Model,Group_Split,GradientBoosting,1.0,1.0,1.0,1.0,1.0,1.0
+Extended Clean Model,Group_Split,HistGradientBoosting,1.0,1.0,1.0,1.0,1.0,1.0
+True Auxiliary-Only Model,Group_Split,DummyClassifier,0.6624605678233438,0.5,0.0,0.0,0.0,0.5
+True Auxiliary-Only Model,Group_Split,LogisticRegression,0.6246056782334385,0.597485536270583,0.45081967213114754,0.514018691588785,0.48034934497816595,0.6485480640854473
+True Auxiliary-Only Model,Group_Split,DecisionTree,0.7050473186119873,0.6524699599465955,0.5737704918032787,0.49065420560747663,0.5289672544080605,0.7198709390298174
+True Auxiliary-Only Model,Group_Split,RandomForest,0.750788643533123,0.7156430796617712,0.6372549019607843,0.6074766355140186,0.6220095693779905,0.7790442812639076
+True Auxiliary-Only Model,Group_Split,GradientBoosting,0.7539432176656151,0.7042723631508678,0.6629213483146067,0.5514018691588785,0.6020408163265306,0.7708611481975968
+True Auxiliary-Only Model,Group_Split,HistGradientBoosting,0.7618296529968455,0.7056408544726301,0.6909090909090909,0.5327102803738317,0.6015831134564644,0.7753782821539831

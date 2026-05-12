@@ -1,0 +1,12 @@
+rank,feature,importance,explanation_note
+1,cod,0.078078078078078,Chemical oxygen demand -- indicates organic pollution load
+2,fecal_coliform,0.0638138138138138,Biological indicator -- microbial contamination marker
+3,conductivity,0.0596096096096096,Dissolved ion concentration proxy
+4,nitrate,0.0277777777777777,Nutrient indicator -- agricultural / sewage runoff
+5,total_coliform,0.0274774774774774,Broad microbial contamination indicator
+6,total_dissolved_solids,0.0136636636636636,Aggregate measure of dissolved substances
+7,turbidity,0.0112612612612612,Physical clarity indicator -- sediment/particulate loading
+8,temperature,0.0105105105105105,Affects dissolved oxygen capacity and biological activity
+9,fecal_streptococci,0.0,Secondary auxiliary indicator
+10,season,0.0,Secondary auxiliary indicator
+11,river_name,0.0,Secondary auxiliary indicator

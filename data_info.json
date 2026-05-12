@@ -1,0 +1,428 @@
+{
+    "shape": [
+        3171,
+        60
+    ],
+    "columns": [
+        {
+            "name": "Station_Code",
+            "dtype": "int64",
+            "unique_count": 1740,
+            "null_count": 0,
+            "sample": "1001"
+        },
+        {
+            "name": "Monitoring_Location",
+            "dtype": "object",
+            "unique_count": 1899,
+            "null_count": 0,
+            "sample": "RIVER BEAS AT U/S MANALI"
+        },
+        {
+            "name": "State",
+            "dtype": "object",
+            "unique_count": 32,
+            "null_count": 11,
+            "sample": "HIMACHAL PRADESH"
+        },
+        {
+            "name": "River_Basin",
+            "dtype": "object",
+            "unique_count": 48,
+            "null_count": 0,
+            "sample": "Beas"
+        },
+        {
+            "name": "Year",
+            "dtype": "int64",
+            "unique_count": 2,
+            "null_count": 0,
+            "sample": "2022"
+        },
+        {
+            "name": "Spatial_Tags",
+            "dtype": "object",
+            "unique_count": 22,
+            "null_count": 0,
+            "sample": "UPSTREAM"
+        },
+        {
+            "name": "Primary_Position",
+            "dtype": "object",
+            "unique_count": 5,
+            "null_count": 0,
+            "sample": "UPSTREAM"
+        },
+        {
+            "name": "Station_Base_Name",
+            "dtype": "object",
+            "unique_count": 1835,
+            "null_count": 0,
+            "sample": "RIVER BEAS MANALI"
+        },
+        {
+            "name": "Station_Group",
+            "dtype": "object",
+            "unique_count": 2514,
+            "null_count": 0,
+            "sample": "BEAS|RIVER BEAS MANALI"
+        },
+        {
+            "name": "Has_US_DS_Pair",
+            "dtype": "bool",
+            "unique_count": 2,
+            "null_count": 0,
+            "sample": "True"
+        },
+        {
+            "name": "Compliance_Label",
+            "dtype": "object",
+            "unique_count": 6,
+            "null_count": 0,
+            "sample": "Class_B"
+        },
+        {
+            "name": "Compliance_Label_Encoded",
+            "dtype": "int64",
+            "unique_count": 6,
+            "null_count": 0,
+            "sample": "1"
+        },
+        {
+            "name": "Is_Safe",
+            "dtype": "int64",
+            "unique_count": 2,
+            "null_count": 0,
+            "sample": "1"
+        },
+        {
+            "name": "Class_Weight",
+            "dtype": "float64",
+            "unique_count": 6,
+            "null_count": 0,
+            "sample": "0.660625"
+        },
+        {
+            "name": "Binary_Class_Weight",
+            "dtype": "float64",
+            "unique_count": 2,
+            "null_count": 0,
+            "sample": "0.8081039755351682"
+        },
+        {
+            "name": "Temperature_Min_C",
+            "dtype": "float64",
+            "unique_count": 165,
+            "null_count": 0,
+            "sample": "2.0"
+        },
+        {
+            "name": "Temperature_Max_C",
+            "dtype": "float64",
+            "unique_count": 169,
+            "null_count": 0,
+            "sample": "17.0"
+        },
+        {
+            "name": "Dissolved_Oxygen_Min_mgL",
+            "dtype": "float64",
+            "unique_count": 105,
+            "null_count": 0,
+            "sample": "7.2"
+        },
+        {
+            "name": "Dissolved_Oxygen_Max_mgL",
+            "dtype": "float64",
+            "unique_count": 133,
+            "null_count": 0,
+            "sample": "9.9"
+        },
+        {
+            "name": "pH_Min",
+            "dtype": "float64",
+            "unique_count": 224,
+            "null_count": 0,
+            "sample": "7.31"
+        },
+        {
+            "name": "pH_Max",
+            "dtype": "float64",
+            "unique_count": 192,
+            "null_count": 0,
+            "sample": "8.19"
+        },
+        {
+            "name": "Conductivity_Min_umho_cm",
+            "dtype": "float64",
+            "unique_count": 703,
+            "null_count": 0,
+            "sample": "74.0"
+        },
+        {
+            "name": "Conductivity_Max_umho_cm",
+            "dtype": "float64",
+            "unique_count": 1341,
+            "null_count": 0,
+            "sample": "403.0"
+        },
+        {
+            "name": "BOD_Min_mgL",
+            "dtype": "float64",
+            "unique_count": 112,
+            "null_count": 0,
+            "sample": "0.0"
+        },
+        {
+            "name": "BOD_Max_mgL",
+            "dtype": "float64",
+            "unique_count": 202,
+            "null_count": 0,
+            "sample": "0.0"
+        },
+        {
+            "name": "Nitrate_N_Min_mgL",
+            "dtype": "float64",
+            "unique_count": 258,
+            "null_count": 0,
+            "sample": "0.32"
+        },
+        {
+            "name": "Nitrate_N_Max_mgL",
+            "dtype": "float64",
+            "unique_count": 738,
+            "null_count": 0,
+            "sample": "1.22"
+        },
+        {
+            "name": "Fecal_Coliform_Min_MPN100ml",
+            "dtype": "float64",
+            "unique_count": 226,
+            "null_count": 0,
+            "sample": "11.0"
+        },
+        {
+            "name": "Fecal_Coliform_Max_MPN100ml",
+            "dtype": "float64",
+            "unique_count": 331,
+            "null_count": 0,
+            "sample": "110.0"
+        },
+        {
+            "name": "Total_Coliform_Min_MPN100ml",
+            "dtype": "float64",
+            "unique_count": 285,
+            "null_count": 0,
+            "sample": "94.0"
+        },
+        {
+            "name": "Total_Coliform_Max_MPN100ml",
+            "dtype": "float64",
+            "unique_count": 341,
+            "null_count": 0,
+            "sample": "540.0"
+        },
+        {
+            "name": "Fecal_Streptococci_Min_MPN100ml",
+            "dtype": "float64",
+            "unique_count": 120,
+            "null_count": 0,
+            "sample": "0.0"
+        },
+        {
+            "name": "Fecal_Streptococci_Max_MPN100ml",
+            "dtype": "float64",
+            "unique_count": 161,
+            "null_count": 0,
+            "sample": "0.0"
+        },
+        {
+            "name": "Temperature_Mean_C",
+            "dtype": "float64",
+            "unique_count": 274,
+            "null_count": 0,
+            "sample": "9.5"
+        },
+        {
+            "name": "Dissolved_Oxygen_Mean_mgL",
+            "dtype": "float64",
+            "unique_count": 254,
+            "null_count": 0,
+            "sample": "8.55"
+        },
+        {
+            "name": "pH_Mean",
+            "dtype": "float64",
+            "unique_count": 391,
+            "null_count": 0,
+            "sample": "7.75"
+        },
+        {
+            "name": "Conductivity_Mean_umho_cm",
+            "dtype": "float64",
+            "unique_count": 1581,
+            "null_count": 0,
+            "sample": "238.5"
+        },
+        {
+            "name": "BOD_Mean_mgL",
+            "dtype": "float64",
+            "unique_count": 320,
+            "null_count": 0,
+            "sample": "0.0"
+        },
+        {
+            "name": "Nitrate_N_Mean_mgL",
+            "dtype": "float64",
+            "unique_count": 907,
+            "null_count": 0,
+            "sample": "0.77"
+        },
+        {
+            "name": "Fecal_Coliform_Mean_MPN100ml",
+            "dtype": "float64",
+            "unique_count": 1017,
+            "null_count": 0,
+            "sample": "60.5"
+        },
+        {
+            "name": "Total_Coliform_Mean_MPN100ml",
+            "dtype": "float64",
+            "unique_count": 1206,
+            "null_count": 0,
+            "sample": "317.0"
+        },
+        {
+            "name": "Fecal_Streptococci_Mean_MPN100ml",
+            "dtype": "float64",
+            "unique_count": 367,
+            "null_count": 0,
+            "sample": "0.0"
+        },
+        {
+            "name": "Temperature_Mean_C_MinMax",
+            "dtype": "float64",
+            "unique_count": 292,
+            "null_count": 0,
+            "sample": "0.238095238095238"
+        },
+        {
+            "name": "Dissolved_Oxygen_Mean_mgL_MinMax",
+            "dtype": "float64",
+            "unique_count": 260,
+            "null_count": 0,
+            "sample": "0.75"
+        },
+        {
+            "name": "pH_Mean_MinMax",
+            "dtype": "float64",
+            "unique_count": 306,
+            "null_count": 0,
+            "sample": "0.0198811032063151"
+        },
+        {
+            "name": "Conductivity_Mean_umho_cm_MinMax",
+            "dtype": "float64",
+            "unique_count": 1581,
+            "null_count": 0,
+            "sample": "0.0046597385182701"
+        },
+        {
+            "name": "BOD_Mean_mgL_MinMax",
+            "dtype": "float64",
+            "unique_count": 302,
+            "null_count": 0,
+            "sample": "0.0"
+        },
+        {
+            "name": "Nitrate_N_Mean_mgL_MinMax",
+            "dtype": "float64",
+            "unique_count": 824,
+            "null_count": 0,
+            "sample": "0.0019472719226149"
+        },
+        {
+            "name": "Fecal_Coliform_Mean_MPN100ml_MinMax",
+            "dtype": "float64",
+            "unique_count": 1017,
+            "null_count": 0,
+            "sample": "5.041204556249011e-06"
+        },
+        {
+            "name": "Total_Coliform_Mean_MPN100ml_MinMax",
+            "dtype": "float64",
+            "unique_count": 1206,
+            "null_count": 0,
+            "sample": "3.962326648209141e-06"
+        },
+        {
+            "name": "Fecal_Streptococci_Mean_MPN100ml_MinMax",
+            "dtype": "float64",
+            "unique_count": 367,
+            "null_count": 0,
+            "sample": "0.0"
+        },
+        {
+            "name": "Temperature_Mean_C_Zscore",
+            "dtype": "float64",
+            "unique_count": 292,
+            "null_count": 0,
+            "sample": "-2.9275224063147487"
+        },
+        {
+            "name": "Dissolved_Oxygen_Mean_mgL_Zscore",
+            "dtype": "float64",
+            "unique_count": 276,
+            "null_count": 0,
+            "sample": "0.9954971833434906"
+        },
+        {
+            "name": "pH_Mean_Zscore",
+            "dtype": "float64",
+            "unique_count": 404,
+            "null_count": 0,
+            "sample": "-0.004423737311687"
+        },
+        {
+            "name": "Conductivity_Mean_umho_cm_Zscore",
+            "dtype": "float64",
+            "unique_count": 1581,
+            "null_count": 0,
+            "sample": "-0.2319524674183312"
+        },
+        {
+            "name": "BOD_Mean_mgL_Zscore",
+            "dtype": "float64",
+            "unique_count": 325,
+            "null_count": 0,
+            "sample": "-0.4862047984678088"
+        },
+        {
+            "name": "Nitrate_N_Mean_mgL_Zscore",
+            "dtype": "float64",
+            "unique_count": 853,
+            "null_count": 0,
+            "sample": "-0.1525760979764115"
+        },
+        {
+            "name": "Fecal_Coliform_Mean_MPN100ml_Zscore",
+            "dtype": "float64",
+            "unique_count": 1017,
+            "null_count": 0,
+            "sample": "-0.0922058792040665"
+        },
+        {
+            "name": "Total_Coliform_Mean_MPN100ml_Zscore",
+            "dtype": "float64",
+            "unique_count": 1206,
+            "null_count": 0,
+            "sample": "-0.0648587201410262"
+        },
+        {
+            "name": "Fecal_Streptococci_Mean_MPN100ml_Zscore",
+            "dtype": "float64",
+            "unique_count": 367,
+            "null_count": 0,
+            "sample": "-0.0326877380510317"
+        }
+    ]
+}

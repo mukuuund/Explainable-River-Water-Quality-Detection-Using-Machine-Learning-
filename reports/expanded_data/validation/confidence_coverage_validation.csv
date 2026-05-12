@@ -1,0 +1,5 @@
+metric,count
+rows with all DO+BOD+pH,0
+rows with >=2 core parameters,4299
+rows with >=1 core parameter,22389
+rows with >=3 auxiliary parameters,17916

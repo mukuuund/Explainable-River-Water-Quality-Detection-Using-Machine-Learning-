@@ -1,0 +1,10 @@
+expected_file,exists,actual_path_if_found,file_size_kb,last_modified,action_taken
+reports/explainability/PHASE_5_1_OUTPUT_REVIEW_README.md,True,reports/explainability/PHASE_5_1_OUTPUT_REVIEW_README.md,9.61,2026-05-02 15:23:53,None
+reports/explainability/phase5_1_cleanup_summary.md,True,reports/explainability/phase5_1_cleanup_summary.md,1.02,2026-05-02 15:23:53,None
+environment_notes.md,True,environment_notes.md,0.51,2026-05-02 15:23:52,None
+reports/explainability/phase5_1_explainability_validation.csv,True,reports/explainability/phase5_1_explainability_validation.csv,0.31,2026-05-02 15:23:52,None
+reports/explainability/dashboard_global_drivers.csv,True,reports/explainability/dashboard_global_drivers.csv,0.98,2026-05-02 15:23:53,None
+reports/explainability/dashboard_auxiliary_drivers.csv,True,reports/explainability/dashboard_auxiliary_drivers.csv,0.84,2026-05-02 15:23:53,None
+reports/explainability/dashboard_hotspot_explanations.csv,True,reports/explainability/dashboard_hotspot_explanations.csv,11.7,2026-05-02 15:23:53,None
+reports/explainability/dashboard_explainable_alerts.csv,True,reports/explainability/dashboard_explainable_alerts.csv,162.58,2026-05-02 15:23:53,None
+reports/explainability/historical_context_for_hotspots_v2.csv,True,reports/explainability/historical_context_for_hotspots_v2.csv,3.76,2026-05-02 15:23:53,None

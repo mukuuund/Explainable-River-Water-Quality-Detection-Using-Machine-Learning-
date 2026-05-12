@@ -1,0 +1,164 @@
+source_file,original_column,normalized_column,reason
+3f8f798f-b3e0-4caa-a34e-6ba2ea4d7eb2.csv,_id,id,No match found
+3f8f798f-b3e0-4caa-a34e-6ba2ea4d7eb2.csv,SlNo,slno,No match found
+3f8f798f-b3e0-4caa-a34e-6ba2ea4d7eb2.csv,Station,station,No match found
+3f8f798f-b3e0-4caa-a34e-6ba2ea4d7eb2.csv,River,river,No match found
+3f8f798f-b3e0-4caa-a34e-6ba2ea4d7eb2.csv,Subtributary,subtributary,No match found
+3f8f798f-b3e0-4caa-a34e-6ba2ea4d7eb2.csv,SubSubtributary,subsubtributary,No match found
+3f8f798f-b3e0-4caa-a34e-6ba2ea4d7eb2.csv,Electric Conductivity (mS/cm),electric_conductivity_ms_cm,No match found
+3f8f798f-b3e0-4caa-a34e-6ba2ea4d7eb2.csv,Turbidity (NTU),turbidity_ntu,No match found
+3f8f798f-b3e0-4caa-a34e-6ba2ea4d7eb2.csv,Temperature (oC),temperature_oc,No match found
+3f8f798f-b3e0-4caa-a34e-6ba2ea4d7eb2.csv,Total Solids (mg/L),total_solids_mg_l,No match found
+swq_biological_parameter_manual_cpcb_ar_2021_2025.csv,SlNo,slno,No match found
+swq_biological_parameter_manual_cpcb_ar_2021_2025.csv,Station,station,No match found
+swq_biological_parameter_manual_cpcb_ar_2021_2025.csv,River,river,No match found
+swq_biological_parameter_manual_cpcb_ar_2021_2025.csv,Subtributary,subtributary,No match found
+swq_biological_parameter_manual_cpcb_ar_2021_2025.csv,SubSubtributary,subsubtributary,No match found
+swq_biological_parameter_manual_cpcb_ar_2021_2025.csv,Biochemical Oxygen Demand (mg/L),biochemical_oxygen_demand_mg_l,No match found
+swq_biological_parameter_manual_cpcb_ar_2021_2025.csv,Chemical Oxygen Demand (mg/L),chemical_oxygen_demand_mg_l,No match found
+swq_biological_parameter_manual_cpcb_ar_2021_2025.csv,Fecal Coliform (MPN/100mL),fecal_coliform_mpn_100ml,No match found
+swq_biological_parameter_manual_cpcb_ar_2021_2025.csv,Total Coliform (MPN/100mL),total_coliform_mpn_100ml,No match found
+swq_biological_parameter_manual_cpcb_as_2021_2025.csv,SlNo,slno,No match found
+swq_biological_parameter_manual_cpcb_as_2021_2025.csv,Station,station,No match found
+swq_biological_parameter_manual_cpcb_as_2021_2025.csv,River,river,No match found
+swq_biological_parameter_manual_cpcb_as_2021_2025.csv,Subtributary,subtributary,No match found
+swq_biological_parameter_manual_cpcb_as_2021_2025.csv,SubSubtributary,subsubtributary,No match found
+swq_biological_parameter_manual_cpcb_as_2021_2025.csv,Biochemical Oxygen Demand (mg/L),biochemical_oxygen_demand_mg_l,No match found
+swq_biological_parameter_manual_cpcb_as_2021_2025.csv,Chemical Oxygen Demand (mg/L),chemical_oxygen_demand_mg_l,No match found
+swq_biological_parameter_manual_cpcb_as_2021_2025.csv,Fecal Coliform (MPN/100mL),fecal_coliform_mpn_100ml,No match found
+swq_biological_parameter_manual_cpcb_as_2021_2025.csv,Total Coliform (MPN/100mL),total_coliform_mpn_100ml,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,SlNo,slno,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Station,station,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,River,river,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Subtributary,subtributary,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,SubSubtributary,subsubtributary,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Amonia N (mgN/L),amonia_n_mgn_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Boron (mg/L),boron_mg_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Carbonate (mg/L),carbonate_mg_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Calcium (mg/L),calcium_mg_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Chloride (mg/L),chloride_mg_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Dissolved oxygen (mg/L),dissolved_oxygen_mg_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Total Dissolved Solids (mg/L),total_dissolved_solids_mg_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Fluoride (mg/L),fluoride_mg_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Bicarbonate (mg/L),bicarbonate_mg_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Potassium (mg/L),potassium_mg_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Magnesium (mg/L),magnesium_mg_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Sodium (mg/L),sodium_mg_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Nitrite N+Nitrate N (mgN/L),nitrite_n_nitrate_n_mgn_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Potential of Hydrogen (pH),potential_of_hydrogen_ph,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Sulphate (mg/L),sulphate_mg_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Total Phosphorus (mgP/L),total_phosphorus_mgp_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Arsenic (mg/L),arsenic_mg_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Total Alkalinity (mg/L as CaCO3),total_alkalinity_mg_l_as_caco3,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Cadmium (mg/L),cadmium_mg_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Chromium (mg/L),chromium_mg_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Iron(mg/L),iron_mg_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Hardness Calcium (mgCaCO3/L),hardness_calcium_mgcaco3_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Mercury(mg/L),mercury_mg_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Hardness_Magnesium (mg/L as CaCO3),hardness_magnesium_mg_l_as_caco3,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Total Hardness (mgCaCO3/L),total_hardness_mgcaco3_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Manganese (mg/L),manganese_mg_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Nitrate N (mgN/L),nitrate_n_mgn_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Nickel (mg/L),nickel_mg_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Lead (mg/L),lead_mg_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Zinc (mg/L),zinc_mg_l,No match found
+swq_chemical_parameter_manual_cwc_jk_2021_2025.csv,Copper (mg/L),copper_mg_l,No match found
+swq_manual_biological_parameters_cpcb_as_1961_2020.csv,SlNo,slno,No match found
+swq_manual_biological_parameters_cpcb_as_1961_2020.csv,Station,station,No match found
+swq_manual_biological_parameters_cpcb_as_1961_2020.csv,River,river,No match found
+swq_manual_biological_parameters_cpcb_as_1961_2020.csv,Subtributary,subtributary,No match found
+swq_manual_biological_parameters_cpcb_as_1961_2020.csv,SubSubtributary,subsubtributary,No match found
+swq_manual_biological_parameters_cpcb_as_1961_2020.csv,Biochemical Oxygen Demand (mg/L),biochemical_oxygen_demand_mg_l,No match found
+swq_manual_biological_parameters_cpcb_as_1961_2020.csv,Chemical Oxygen Demand (mg/L),chemical_oxygen_demand_mg_l,No match found
+swq_manual_biological_parameters_cpcb_as_1961_2020.csv,Fecal Coliform (MPN/100mL),fecal_coliform_mpn_100ml,No match found
+swq_manual_biological_parameters_cpcb_as_1961_2020.csv,Total Coliform (MPN/100mL),total_coliform_mpn_100ml,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,SlNo,slno,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Station,station,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,River,river,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Subtributary,subtributary,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,SubSubtributary,subsubtributary,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Amonia N (mgN/L),amonia_n_mgn_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Boron (mg/L),boron_mg_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Carbonate (mg/L),carbonate_mg_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Calcium (mg/L),calcium_mg_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Chloride (mg/L),chloride_mg_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Dissolved oxygen (mg/L),dissolved_oxygen_mg_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Total Dissolved Solids (mg/L),total_dissolved_solids_mg_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Fluoride (mg/L),fluoride_mg_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Bicarbonate (mg/L),bicarbonate_mg_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Potassium (mg/L),potassium_mg_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Magnesium (mg/L),magnesium_mg_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Sodium (mg/L),sodium_mg_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Nitrite N+Nitrate N (mgN/L),nitrite_n_nitrate_n_mgn_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Potential of Hydrogen (pH),potential_of_hydrogen_ph,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Sulphate (mg/L),sulphate_mg_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Total Phosphorus (mgP/L),total_phosphorus_mgp_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Arsenic (mg/L),arsenic_mg_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Total Alkalinity (mg/L as CaCO3),total_alkalinity_mg_l_as_caco3,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Cadmium (mg/L),cadmium_mg_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Chromium (mg/L),chromium_mg_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Iron(mg/L),iron_mg_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Hardness Calcium (mgCaCO3/L),hardness_calcium_mgcaco3_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Mercury(mg/L),mercury_mg_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Hardness_Magnesium (mg/L as CaCO3),hardness_magnesium_mg_l_as_caco3,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Total Hardness (mgCaCO3/L),total_hardness_mgcaco3_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Manganese (mg/L),manganese_mg_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Nitrate N (mgN/L),nitrate_n_mgn_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Nickel (mg/L),nickel_mg_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Lead (mg/L),lead_mg_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Zinc (mg/L),zinc_mg_l,No match found
+swq_manual_chemical_parameters_cwc_jk_1961_2020.csv,Copper (mg/L),copper_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,SlNo,slno,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Station,station,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,River,river,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Subtributary,subtributary,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,SubSubtributary,subsubtributary,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Amonia N (mgN/L),amonia_n_mgn_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Boron (mg/L),boron_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Carbonate (mg/L),carbonate_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Calcium (mg/L),calcium_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Chloride (mg/L),chloride_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Dissolved oxygen (mg/L),dissolved_oxygen_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Total Dissolved Solids (mg/L),total_dissolved_solids_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Fluoride (mg/L),fluoride_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Bicarbonate (mg/L),bicarbonate_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Potassium (mg/L),potassium_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Magnesium (mg/L),magnesium_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Sodium (mg/L),sodium_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Nitrite N+Nitrate N (mgN/L),nitrite_n_nitrate_n_mgn_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Potential of Hydrogen (pH),potential_of_hydrogen_ph,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Sulphate (mg/L),sulphate_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Total Phosphorus (mgP/L),total_phosphorus_mgp_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Arsenic (mg/L),arsenic_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Total Alkalinity (mg/L as CaCO3),total_alkalinity_mg_l_as_caco3,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Cadmium (mg/L),cadmium_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Chromium (mg/L),chromium_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Iron(mg/L),iron_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Hardness Calcium (mgCaCO3/L),hardness_calcium_mgcaco3_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Mercury(mg/L),mercury_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Hardness_Magnesium (mg/L as CaCO3),hardness_magnesium_mg_l_as_caco3,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Total Hardness (mgCaCO3/L),total_hardness_mgcaco3_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Manganese (mg/L),manganese_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Nitrate N (mgN/L),nitrate_n_mgn_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Nickel (mg/L),nickel_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Lead (mg/L),lead_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Zinc (mg/L),zinc_mg_l,No match found
+swq_manual_chemical_parameters_cwc_ka_1961_2020.csv,Copper (mg/L),copper_mg_l,No match found
+swq_manual_physical_parameters_cwc_ar_1961_2020.csv,SlNo,slno,No match found
+swq_manual_physical_parameters_cwc_ar_1961_2020.csv,Station,station,No match found
+swq_manual_physical_parameters_cwc_ar_1961_2020.csv,River,river,No match found
+swq_manual_physical_parameters_cwc_ar_1961_2020.csv,Subtributary,subtributary,No match found
+swq_manual_physical_parameters_cwc_ar_1961_2020.csv,SubSubtributary,subsubtributary,No match found
+swq_manual_physical_parameters_cwc_ar_1961_2020.csv,Electric Conductivity (μS/cm),electric_conductivity_s_cm,No match found
+swq_manual_physical_parameters_cwc_ar_1961_2020.csv,Turbidity (NTU),turbidity_ntu,No match found
+swq_manual_physical_parameters_cwc_ar_1961_2020.csv,Temperature (ºC),temperature_c,No match found
+swq_manual_physical_parameters_cwc_ar_1961_2020.csv,Total Solids (mg/L),total_solids_mg_l,No match found
+swq_physical_parameter_manual_cwc_ar_2021_2025.csv,SlNo,slno,No match found
+swq_physical_parameter_manual_cwc_ar_2021_2025.csv,Station,station,No match found
+swq_physical_parameter_manual_cwc_ar_2021_2025.csv,River,river,No match found
+swq_physical_parameter_manual_cwc_ar_2021_2025.csv,Subtributary,subtributary,No match found
+swq_physical_parameter_manual_cwc_ar_2021_2025.csv,SubSubtributary,subsubtributary,No match found
+swq_physical_parameter_manual_cwc_ar_2021_2025.csv,Electric Conductivity (μS/cm),electric_conductivity_s_cm,No match found
+swq_physical_parameter_manual_cwc_ar_2021_2025.csv,Turbidity (NTU),turbidity_ntu,No match found
+swq_physical_parameter_manual_cwc_ar_2021_2025.csv,Temperature (ºC),temperature_c,No match found
+swq_physical_parameter_manual_cwc_ar_2021_2025.csv,Total Solids (mg/L),total_solids_mg_l,No match found

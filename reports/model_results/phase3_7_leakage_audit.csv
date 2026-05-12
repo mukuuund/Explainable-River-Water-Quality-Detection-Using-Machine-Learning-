@@ -1,0 +1,33 @@
+Variant,Feature,Action,Reason
+Core Regulatory Model,dissolved_oxygen,Accepted,Allowed canonical parameter
+Core Regulatory Model,bod,Accepted,Allowed canonical parameter
+Core Regulatory Model,ph,Accepted,Allowed canonical parameter
+Extended Clean Model,dissolved_oxygen,Accepted,Allowed canonical parameter
+Extended Clean Model,bod,Accepted,Allowed canonical parameter
+Extended Clean Model,ph,Accepted,Allowed canonical parameter
+Extended Clean Model,temperature,Accepted,Clean
+Extended Clean Model,conductivity,Accepted,Clean
+Extended Clean Model,nitrate,Accepted,Clean
+Extended Clean Model,fecal_coliform,Accepted,Clean
+Extended Clean Model,total_coliform,Accepted,Clean
+Extended Clean Model,fecal_streptococci,Accepted,Clean
+Extended Clean Model,turbidity,Accepted,Clean
+Extended Clean Model,cod,Accepted,Clean
+Extended Clean Model,total_dissolved_solids,Accepted,Clean
+Extended Clean Model,season,Accepted,Clean
+Extended Clean Model,station_position_tag,Rejected,Not in dataframe
+Extended Clean Model,pollution_context_tag,Rejected,Not in dataframe
+Extended Clean Model,river_name,Accepted,Clean
+True Auxiliary-Only Model,temperature,Accepted,Clean
+True Auxiliary-Only Model,conductivity,Accepted,Clean
+True Auxiliary-Only Model,nitrate,Accepted,Clean
+True Auxiliary-Only Model,fecal_coliform,Accepted,Clean
+True Auxiliary-Only Model,total_coliform,Accepted,Clean
+True Auxiliary-Only Model,fecal_streptococci,Accepted,Clean
+True Auxiliary-Only Model,turbidity,Accepted,Clean
+True Auxiliary-Only Model,cod,Accepted,Clean
+True Auxiliary-Only Model,total_dissolved_solids,Accepted,Clean
+True Auxiliary-Only Model,season,Accepted,Clean
+True Auxiliary-Only Model,station_position_tag,Rejected,Not in dataframe
+True Auxiliary-Only Model,pollution_context_tag,Rejected,Not in dataframe
+True Auxiliary-Only Model,river_name,Accepted,Clean

@@ -1,0 +1,4 @@
+Model,Balanced_Accuracy,ROC_AUC,F1_NonCompliant,Group_Column
+DecisionTree_Unrestricted,1.0,1.0,1.0,station_name
+DecisionTree_Restricted_d5_l10,1.0,1.0,1.0,station_name
+RandomForest_Restricted_d5_l10,0.9448486871384068,0.9922785936804629,0.9311163895486936,station_name

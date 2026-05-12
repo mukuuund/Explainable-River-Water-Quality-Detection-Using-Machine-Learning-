@@ -1,0 +1,2 @@
+endpoint_reachable,records_fetched,parameters_detected,stations_detected,pH_records_count,DO_records_count,BOD_records_count,rows_with_full_core_parameters,rows_with_partial_core_parameters,model_prediction_success_count,model_prediction_failed_count,alerts_generated,output_files_created
+True,468,12,40,40,40,40,40,0,40,0,61,True

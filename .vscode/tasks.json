@@ -1,0 +1,10 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Phase 3",
+			"type": "shell",
+			"command": "python main_phase3.py"
+		}
+	]
+}

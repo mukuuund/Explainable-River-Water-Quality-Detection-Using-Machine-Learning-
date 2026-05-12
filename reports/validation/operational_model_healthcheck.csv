@@ -1,0 +1,2 @@
+total_rows,full_core_params_rows,successful_predictions,failed_predictions,compliant_predictions,non_compliant_predictions,non_null_probabilities,prob_min,prob_mean,prob_max,rule_agreement
+666,645,666,0,175,491,666,0.0,0.7372372372372372,1.0,641 (99.4%)

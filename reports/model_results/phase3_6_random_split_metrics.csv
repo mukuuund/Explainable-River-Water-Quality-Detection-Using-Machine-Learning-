@@ -1,0 +1,16 @@
+Variant,Split_Type,Model,Accuracy,Balanced_Accuracy,Precision_NonCompliant,Recall_NonCompliant,F1_NonCompliant,ROC_AUC
+Core Regulatory Model,Random_Split,DummyClassifier,0.662992125984252,0.5,0.0,0.0,0.0,0.5
+Core Regulatory Model,Random_Split,LogisticRegression,0.925984251968504,0.9200557195817702,0.8812785388127854,0.9018691588785047,0.8914549653579676,0.9782116456145804
+Core Regulatory Model,Random_Split,DecisionTree (depth=5),1.0,1.0,1.0,1.0,1.0,1.0
+Core Regulatory Model,Random_Split,RandomForest (depth=5),1.0,1.0,1.0,1.0,1.0,1.0
+Core Regulatory Model,Random_Split,GradientBoosting (depth=5),1.0,1.0,1.0,1.0,1.0,1.0
+Extended Clean Model,Random_Split,DummyClassifier,0.662992125984252,0.5,0.0,0.0,0.0,0.5
+Extended Clean Model,Random_Split,LogisticRegression,0.9244094488188976,0.920016871267787,0.8738738738738738,0.9065420560747663,0.8899082568807339,0.9791440051501764
+Extended Clean Model,Random_Split,DecisionTree (depth=5),1.0,1.0,1.0,1.0,1.0,1.0
+Extended Clean Model,Random_Split,RandomForest (depth=5),1.0,1.0,1.0,1.0,1.0,1.0
+Extended Clean Model,Random_Split,GradientBoosting (depth=5),1.0,1.0,1.0,1.0,1.0,1.0
+True Auxiliary-Only Model,Random_Split,DummyClassifier,0.662992125984252,0.5,0.0,0.0,0.0,0.5
+True Auxiliary-Only Model,Random_Split,LogisticRegression,0.584251968503937,0.5727295935356406,0.4107142857142857,0.5373831775700935,0.46558704453441296,0.6261793238173463
+True Auxiliary-Only Model,Random_Split,DecisionTree (depth=5),0.7228346456692913,0.6703498568162142,0.6055555555555555,0.5093457943925234,0.5532994923857868,0.721485337536351
+True Auxiliary-Only Model,Random_Split,RandomForest (depth=5),0.7448818897637796,0.6950185361955291,0.6444444444444445,0.5420560747663551,0.5888324873096447,0.7661553488578595
+True Auxiliary-Only Model,Random_Split,GradientBoosting (depth=5),0.8031496062992126,0.7458543299220813,0.7870967741935484,0.5700934579439252,0.6612466124661247,0.8099429484760362

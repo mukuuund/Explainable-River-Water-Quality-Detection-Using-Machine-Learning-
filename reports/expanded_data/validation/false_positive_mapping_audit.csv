@@ -1,0 +1,6 @@
+test_name,pass_fail,evidence,affected_columns_if_any
+sulphate_not_ph,Pass,No false positives detected,None
+phosphate_not_ph,Pass,No false positives detected,None
+odour_not_do,Pass,No false positives detected,None
+water_body_not_bod,Pass,No false positives detected,None
+use_based_class_not_target,Pass,class not found or use_based_class not treated as ML target,None

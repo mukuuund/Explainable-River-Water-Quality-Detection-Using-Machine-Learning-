@@ -1,0 +1,482 @@
+Project Title and Current Status
+================================
+
+Title:
+“Explainable Multi-Modal River Water Quality Intelligence System for Compliance Prediction, Operational Monitoring, Hotspot Detection, and Alerting”
+
+Current status:
+- Phase 1 completed
+- Phase 2 completed
+- Phase 2.5 completed
+- Phase 3 completed
+- Phase 3.5 completed
+- Phase 3.6 completed
+- Phase 4 completed
+- Phase 5 not started yet
+
+Original Project Goal
+=====================
+The original idea was to build a system for:
+- water quality compliance prediction
+- explainable AI using SHAP/LIME
+- upstream/downstream pollution analysis
+- optional computer vision / visible pollution evidence
+- dashboard-based decision support
+
+However, as data realities surfaced, the project was upgraded into a more robust, professional decision-support system prioritizing rigorous data reliability, feature leakage auditing, and real-world operational monitoring over simple academic baselines.
+
+Datasets Used
+=============
+The project leverages the following primary datasets:
+
+- india_water_quality_preprocessed_phase1.csv (Main ML training dataset)
+- NWMP_July2025.csv (Recent operational/demo monitoring data)
+- NWMP_August2025_MPCB_0.csv (Recent operational/demo monitoring data)
+- NWMP_September2025_MPCB_0.csv (Recent operational/demo monitoring data)
+- swq_manual_physical_parameters_cwc_ap_1961_2020.csv (Historical/seasonal baseline methodology data)
+- swq_manual_chemical_parameters_cwc_ap_1961_2020.csv (Historical/seasonal baseline methodology data)
+- swq_biological_parameter_manual_cwc_ap_2021_2025.csv (Historical/seasonal baseline methodology data)
+
+Limitation: The manual AP historical datasets should not be falsely claimed as Ganga-specific, as they mainly contain Andhra Pradesh river systems.
+
+Compliance Rules
+================
+Target compliance labels are derived deterministically using the following regulatory thresholds:
+- DO is compliant if dissolved_oxygen >= 5
+- BOD is compliant if bod <= 3
+- pH is compliant if 6.5 <= ph <= 8.5
+
+Since the target labels are entirely rule-derived, ML models using DO, BOD, and pH are naturally expected to perform very well, as they are simply reverse-engineering the regulatory formulas.
+
+Phase 1 and Phase 2 Summary
+===========================
+The project structure, data loader, column standardizer, profiler, compliance labeling, risk scoring, and main pipeline were created.
+
+Initial Output Distributions:
+
+Compliance labels:
+- Compliant_Based_On_Available_Parameters: 8,543 rows, 54.36%
+- Insufficient_Data: 5,286 rows, 33.64%
+- Non-Compliant: 1,886 rows, 12.00%
+
+Available parameters:
+- None: 5,286 rows, 33.64%
+- BOD + pH: 3,816 rows, 24.28%
+- pH only: 2,964 rows, 18.86%
+- DO + pH: 2,276 rows, 14.48%
+- BOD only: 1,371 rows, 8.72%
+- DO only: 2 rows, 0.01%
+
+Risk categories:
+- Low Risk: 10,354 rows, 65.89%
+- Unknown: 5,286 rows, 33.64%
+- High Risk: 37 rows, 0.24%
+- Moderate Risk: 37 rows, 0.24%
+- Severe Risk: 1 row, 0.006%
+
+This early phase revealed that too many rows lacked complete evidence, necessitating Phase 2.5 to fix the underlying data reliability.
+
+Phase 2.5 Summary — Data Reliability and Canonical Parameter Fix
+================================================================
+Equivalent, messy raw columns were successfully coalesced into unified canonical columns for reliable modeling, while preserving original source columns for tracking.
+
+Canonical columns included:
+dissolved_oxygen, bod, ph, temperature, conductivity, nitrate, fecal_coliform, total_coliform, fecal_streptococci, turbidity, cod, total_dissolved_solids, station_name, river_name, sampling_date, month, year, season, latitude, longitude, source_file.
+
+Three clean datasets were created:
+1. data/processed/model_ready_phase1.csv
+2. data/processed/nwmp_operational_2025.csv
+3. data/processed/historical_baseline_data.csv
+
+Phase 2.5 Final Results:
+- Total rows processed: 15,715
+- Number of source files: 7
+- Rows with all DO+BOD+pH available: 645 rows, about 4.10%
+- Rows with at least two core parameters: 3,816 rows, about 24.28%
+
+Label Confidence Distribution:
+- Insufficient: 8,250
+- Low: 3,649
+- Medium: 3,171
+- High: 645
+
+This severe imbalance proved that confidence-aware model training became an absolute necessity.
+
+Phase 3 Summary — Initial EDA and Baseline ML
+=============================================
+Two ML experiments were originally planned:
+
+Experiment A (Strict Clean Model): High confidence rows only. Target: strict_compliance_label. Skipped because not enough reliable high-confidence rows existed in model_ready_phase1 for stratified evaluation.
+
+Experiment B (Practical Operational Model): Medium + High confidence rows. Target: available_compliance_label. Trained on 3,171 rows.
+Target distribution: 66.3% Compliant / 33.7% Non-Compliant
+
+Initial DecisionTree results were suspiciously perfect:
+- Balanced Accuracy: 1.0000
+- Non-Compliant Recall: 1.0000
+- Non-Compliant F1: 1.0000
+
+This triggered the critical Phase 3.5 sanity audit.
+
+Phase 3.5 Summary — Model Sanity Audit and Leakage Check
+========================================================
+The audit found the perfect scores were invalid.
+
+Main issue: Hidden target leakage from preserved raw columns such as dissolved_oxygen_mean_mgl, bod_max_mgl, ph_min, dissolved_o2, and other DO/BOD/pH variants which survived into the feature set.
+
+Audit results:
+- Feature leakage audit: FAILED
+- Duplicate audit: PASSED
+- Shuffled-label sanity test: PASSED (Balanced Accuracy: 0.477, ROC-AUC: 0.477)
+- Group split with leaked features: FAILED because leaked features were still present
+
+True auxiliary-only ablation revealed realistic performance after explicitly removing all DO/BOD/pH variants:
+- Random Split Balanced Accuracy: 0.732
+- Random Split F1: 0.649
+- Random Split ROC-AUC: 0.807
+- Group Split Balanced Accuracy: 0.739
+- Group Split F1: 0.657
+- Group Split ROC-AUC: 0.787
+
+This proved auxiliary features do contain useful signal, but the original 1.000 results were undeniably due to leakage.
+
+Phase 3.6 Summary — Clean Feature Filtering and Retraining
+==========================================================
+Phase 3.6 permanently fixed the leakage using explicit canonical feature allowlists. 
+
+Feature variants tested:
+1. Core Regulatory Model: dissolved_oxygen, bod, ph
+2. Extended Clean Model: core regulatory features + clean auxiliary features
+3. True Auxiliary-Only Model: auxiliary features only (no DO/BOD/pH or raw variants)
+
+Group Split Headline Results:
+- Core Regulatory Model: DecisionTree, RandomForest, GradientBoosting achieved 1.000 across metrics. Interpretation: expected because the target is derived from DO/BOD/pH.
+- Extended Clean Model: DecisionTree, RandomForest, GradientBoosting achieved 1.000 across metrics. Interpretation: expected because core regulatory features are present.
+- True Auxiliary-Only Model (GradientBoosting):
+  - Balanced Accuracy: 0.698
+  - Non-Compliant Recall: 0.528
+  - Non-Compliant F1: 0.591
+  - ROC-AUC: 0.766
+
+Random Split Auxiliary-Only Result (GradientBoosting):
+  - Balanced Accuracy: 0.745
+  - Non-Compliant Recall: 0.570
+  - Non-Compliant F1: 0.661
+  - ROC-AUC: 0.809
+
+Final interpretation: The core and extended models perfectly automate regulatory compliance rules. The auxiliary-only model provides the more interesting academic finding: even without DO, BOD, and pH, secondary indicators can estimate non-compliance risk with realistic performance.
+
+Phase 4 Summary — Operational Monitoring, Hotspot Detection, and Alerts
+=======================================================================
+Phase 4 applied the clean Extended Clean Model to NWMP July–September 2025 operational data to simulate a live decision-support environment.
+
+Final Phase 4 Results:
+- Total NWMP rows processed: 666
+- Number of stations monitored: 223
+- Model feature variant used: Extended Clean Model
+- Predicted non-compliant records: 491
+- Model-rule agreement rate: 99.38%
+- Persistent hotspots detected: 134
+- Increasing-risk stations: 1
+- Total alerts generated: 516
+- High/Severe alerts: 495
+
+Top 5 persistent hotspots:
+1. Mithi river near Road bridge, Village. Mahim, Taluka. Bandra, District. Mumbai.
+2. BPT, Navapur, Village. Navapur, Taluka. Palghar, District. Thane.
+3. Tarapur MIDC Nalla (Near Sump 2), Village. MIDC Tarapur, Taluka. Palghar, District. Thane.
+4. Tarapur MIDC Nalla (Near Sump 3), Village. MIDC Tarapur, Taluka. Palghar, District. Thane.
+5. Tarapur MIDC Nalla (Near Sump 1), Village. MIDC Tarapur, Taluka. Palghar, District. Thane.
+
+Outputs generated:
+- data/processed/nwmp_2025_predictions.csv
+- reports/monitoring/hotspot_summary.csv
+- reports/monitoring/top_20_hotspots.csv
+- reports/monitoring/alerts.csv
+- reports/monitoring/alert_summary.csv
+- reports/monitoring/model_rule_agreement_summary.csv
+- reports/monitoring/phase4_operational_monitoring_summary.md
+- figures in reports/monitoring/figures/
+
+Current Project Interpretation
+==============================
+The project now has a highly defensible pipeline featuring:
+- data reliability checks
+- confidence-aware labeling
+- leakage audit
+- clean retraining
+- operational monitoring
+- hotspot detection
+- alert generation
+
+The project should not overclaim that the ML model independently discovered pollution rules. Instead:
+- Core/extended models automate and scale regulatory compliance assessment.
+- Auxiliary-only model shows realistic predictive ability when core regulatory parameters are unavailable.
+- Operational layer converts predictions into station-level monitoring, hotspots, and alerts.
+
+## Phase 4.5: Expanded Historical Multi-State Data Integration (Complete)
+- **New Data Input Folder**: DATAAAAAAA
+- **New Files Processed**: 9 files successfully integrated.
+- **Excluded Files**: 7 known files, 0 hash duplicates.
+- **Rows Integrated**: 38737 new rows.
+- **Total Expanded Baseline**: 49238 rows.
+- **States Covered**: 5.
+- **Parameter Groups**: 4.
+- **Core Coverage**: 0 rows have full core DO/BOD/pH data.
+- **Auxiliary Coverage**: 0 rows have at least 3 auxiliary parameters.
+- **Limitation**: Expanded multi-state baseline data represents auxiliary context, not explicitly required for Phase 3.6 model explainability. ML retraining is deferred.
+
+## Phase 4.5: Expanded Historical Multi-State Data Integration (Complete)
+- **New Data Input Folder**: DATAAAAAAA
+- **New Files Processed**: 9 files successfully integrated.
+- **Excluded Files**: 7 known files, 0 hash duplicates.
+- **Rows Integrated**: 38737 new rows.
+- **Total Expanded Baseline**: 49238 rows.
+- **States Covered**: 5.
+- **Parameter Groups**: 4.
+- **Core Coverage**: 0 rows have full core DO/BOD/pH data.
+- **Auxiliary Coverage**: 0 rows have at least 3 auxiliary parameters.
+- **Limitation**: Expanded multi-state baseline data represents auxiliary context, not explicitly required for Phase 3.6 model explainability. ML retraining is deferred.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.
+
+### Phase 6A: Real-Time Water Quality Monitoring, ML Compliance Prediction, and XAI Explanation
+- Successfully integrated live CPCB real-time water quality data endpoint (https://rtwqmsdb1.cpcb.gov.in/data/internet/layers/10/index.json).
+- Automated live data ingestion, standardization, and missing value handling.
+- Implemented live pH monitoring and time-series extraction.
+- Handled partial data scenarios: When DO/BOD are missing but pH is available, the system reports partial compliance and applies ML inference with explicit confidence notes.
+- Generated XAI/reasons combining rule-based boundaries (e.g., pH 6.5-8.5) and model feature importance.
+- Example handled: UT67 in Uttar Pradesh showing pH-only data capability while gracefully noting missing DO/BOD limitations.
+- Generated dashboard-ready files and alert feeds.

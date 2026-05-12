@@ -1,0 +1,3 @@
+Split_Type,Model,Balanced_Accuracy,ROC_AUC,F1_NonCompliant
+Random_Split,DecisionTree_Restricted,0.7324239128021843,0.8072735143294781,0.6492985971943888
+Group_Split,DecisionTree_Restricted,0.7391744548286605,0.7878615932354249,0.657258064516129

@@ -1,0 +1,15 @@
+expected_feature,present_in_raw,non_null_count,dtype_in_model_input,sample_value_raw,numeric_cleaning_applied
+dissolved_oxygen,True,645,float64,6.7,False
+bod,True,645,float64,3.2,False
+ph,True,645,float64,8.4,False
+temperature,True,583,float64,28.0,False
+conductivity,True,645,float64,575.0,False
+nitrate,True,641,float64,0.54,False
+fecal_coliform,True,645,float64,1.8,False
+total_coliform,True,645,float64,35.0,False
+fecal_streptococci,True,517,float64,1.8,False
+turbidity,True,645,float64,1.0,False
+cod,True,645,float64,16.0,False
+total_dissolved_solids,True,645,float64,497.0,False
+season,True,0,float64,Monsoon,True
+river_name,True,0,float64,Godavari,True

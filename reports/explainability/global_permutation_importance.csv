@@ -1,0 +1,15 @@
+feature,importance,importance_std
+bod,0.14654654654654656,0.006377405580058655
+dissolved_oxygen,0.04864864864864865,0.006270454359706033
+ph,0.0,0.0
+temperature,0.0,0.0
+conductivity,0.0,0.0
+nitrate,0.0,0.0
+fecal_coliform,0.0,0.0
+total_coliform,0.0,0.0
+fecal_streptococci,0.0,0.0
+turbidity,0.0,0.0
+cod,0.0,0.0
+total_dissolved_solids,0.0,0.0
+season,0.0,0.0
+river_name,0.0,0.0

@@ -1,0 +1,7 @@
+file,exists,row_count,expected_count,count_match
+global_permutation_importance.csv,True,14,,
+auxiliary_shap_importance.csv,True,11,,
+rule_based_explanations.csv,True,666,666,True
+top_hotspot_explanations.csv,True,20,20,True
+severe_alert_explanations.csv,True,191,,
+explainable_alerts.csv,True,516,516,True
